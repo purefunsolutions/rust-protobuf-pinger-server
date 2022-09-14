@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package pinger;
+
+// Pinger-service
+service Pinger {
+  // Ping function
+  rpc Ping (PingRequest) returns (PingResponse);
+}
+
+message PingRequest {
+  string msg = 1;
+}
+
+message PingResponse {
+  string reply = 1;
+}
