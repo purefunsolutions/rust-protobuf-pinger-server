@@ -24,7 +24,7 @@ impl Pinger for MyPinger {
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("rust-protobuf-pinger-server");
 
-    let addr = "[::1]:5678".parse().unwrap();
+    let addr = "0.0.0.0:5678".parse().unwrap();
     let pinger = MyPinger::default();
 
     println!("Listening on {}", addr);
